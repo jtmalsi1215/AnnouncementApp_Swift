@@ -1,8 +1,7 @@
-# TRABILIS - A Travel Booking Mangement System
+# 📢 Acadvisory - Announcement App
 
 ![project-banner](./Acadvisory/Simulator-Screenshot.png)
 
-# 📢 Acadvisory - Announcement App
 
 ## 📖 About
 
