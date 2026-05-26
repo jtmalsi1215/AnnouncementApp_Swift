@@ -1,6 +1,6 @@
 # TRABILIS - A Travel Booking Mangement System
 
-![project-banner](/Acadvisory/Simulator Screenshot.png)
+![project-banner](./Acadvisory/Simulator-Screenshot.png)
 
 ## 📖 About
 
