@@ -2,82 +2,121 @@
 
 ![project-banner](./Acadvisory/Simulator-Screenshot.png)
 
+# 📢 Acadvisory - Announcement App
+
 ## 📖 About
 
-Trabilis is a comprehensive booking management solution engineered to digitize operations for Lindela Travel & Tours.
+Acadvisory is a mobile announcement application designed for **Our Lady of Fatima University Antipolo Campus**. The application provides a centralized platform where students can easily view campus announcements, event schedules, recent updates, and important notifications using their mobile devices.
 
-The primary goal was to replace manual bookkeeping, reservation tracking, and payment processing with a centralized, automated web platform. Beyond just administrative efficiency, the application focuses on modernizing the customer experience by integrating immersive 360° Virtual Tours (via Pannellum) and an AI-powered Helpdesk Assistant (via Botpress).
+The main goal of Acadvisory is to improve the way school announcements are shared and accessed. Instead of relying only on group chats, manual posting, or scattered information, the app allows users to receive and check announcements in a more organized and convenient way.
+
+The system includes student and admin access. Students can view announcements, browse categories, check event dates and times, and mark notifications as read. Administrators can create, edit, delete, and manage announcements through the app.
+
+---
 
 ## 🎓 Story
 
-I built this as my senior capstone project at Our Lady of Fatima University. My objective was to challenge myself beyond standard "CRUD" web applications. I wanted to tackle real-world software engineering problems—such as handling complex booking workflows, automating document generation, and managing role-based security—to demonstrate my readiness for the professional tech industry.
+I built Acadvisory as a mobile application project connected to Our Lady of Fatima University Antipolo Campus. The objective of this project was to create a useful campus-based announcement system that helps students stay updated with important school information.
 
-## 🚀 Live Demos
+Through this project, I was able to apply my skills in mobile app development, user interface design, Firebase authentication, Firestore database integration, and role-based access control. The project also helped me improve my problem-solving and debugging skills while building an application that can be useful in a real school environment.
 
-This project is architected as two separate applications to ensure security and separation of concerns.
+---
 
-> ⚠️ **Note on Performance:** The backend is hosted on a free Render instance.
-> Please allow **30-50 seconds** for the initial load while the server wakes up.
-> Subsequent requests will be instant.
+## 🚀 Live Demo
+
+This project is currently designed as a mobile application and can be run using Xcode or a compatible iOS simulator.
+
+> ⚠️ **Note:** The application requires Firebase configuration through `GoogleService-Info.plist` in order to connect properly to Firebase Authentication and Firestore Database.
+
+---
 
 ## ✨ Key Features
 
-**[🔗 Visit Public Site](https://trabilis.vercel.app)**
+### 👤 User Features
 
-### 🌐 Client Portal (Public Facing)
+- **User Registration and Login**  
+  Allows students/users to create an account and securely log in using their email and password.
 
--   **Full-Cycle Booking Engine:** Users can search, reserve, and pay for both Flights and Tour Packages seamlessly.
--   **Interactive 360° Virtual Tours:** Integrated **Pannellum** to provide immersive, panoramic previews of tourist destinations directly in the browser.
--   **Automated Document Generation:** System automatically generates PDF invoices/receipts and emails them to the user upon successful payment.
--   **Real-Time Application Tracking:** Users can monitor the status of their Flight, Tour, and Visa applications via a unified tracking page.
--   **AI-Powered Support:** Integrated **Botpress** chatbot to handle common customer inquiries and guide users through the booking process.
+- **Announcement Dashboard**  
+  Displays featured announcements, recent updates, categories, and important campus information.
 
-**[🔗 Visit Admin Dashboard](https://your-admin-link.vercel.app)**
+- **Browse by Category**  
+  Users can browse announcements by categories such as Academics, Events, Urgent, Organization, and Campus Updates.
 
-### 🛡️ Admin Dashboard (Internal Operations)
+- **Calendar / Announcement View**  
+  Allows users to view announcements with posted date, event date, event time, category, and full announcement details.
 
--   **Role-Based Access Control (RBAC):** Granular permission settings (Admins vs. Staff) to secure sensitive modules.
--   **Operational Workflow Management:** Features a task assignment system to delegate specific bookings to staff members.
--   **Data Visualization & Analytics:** Interactive charts providing insights into booking trends, revenue, and flight/tour popularity.
--   **Content Management System (CMS):** Full control to create/edit Tour Packages and customize system settings (Visa requirements, Email templates).
--   **Notification Hub:** A centralized system with filtering capabilities to alert admins of new bookings and inquiries.
--   **Customer Feedback Loop:** Built-in rating system that collects and displays user reviews after trip completion.
+- **Notification System**  
+  Notifies students when new announcements are posted.
 
--   **🔐 Demo Credentials:**
-    -   **Email:** `lorenz@admin.com`
-    -   **Password:** `12345678`
+- **Read Notification Status**  
+  Students can mark announcements as read to keep track of updates they have already checked.
+
+- **User Profile**  
+  Displays the user’s profile information, including name, role, and profile picture.
+
+---
+
+### 🛡️ Admin Features
+
+- **Admin Login**  
+  Allows authorized admin users to access announcement management features.
+
+- **Create Announcement**  
+  Admins can create and publish announcements by entering the announcement title, date of event, time of event, category, and details.
+
+- **Edit Announcement**  
+  Admins can update existing announcements when changes are needed.
+
+- **Delete Announcement**  
+  Admins can remove announcements that are no longer needed.
+
+- **Announcement History**  
+  Admins can view the history of announcement edits and deletions for tracking and record purposes.
+
+- **Role-Based Access**  
+  Admin-only features are hidden from student accounts to prevent unauthorized actions.
+
+---
 
 ## 🛠 Tech Stack
 
-**Frontend:**
+### Mobile App
 
--   **React (Vite)** – For a fast, component-based UI.
--   **Tailwind CSS** – For rapid, mobile-responsive styling.
+- **Swift / SwiftUI** – Used to build the iOS mobile application interface and functionality.
+- **Xcode** – Main development environment used for creating and running the iOS app.
 
-**Backend & Database:**
+### Backend & Database
 
--   **Supabase** – Managed PostgreSQL database with built-in Auth and Realtime subscriptions.
--   **Node.js / Express** – REST API handling secure transactions and background processes.
+- **Firebase Authentication** – Handles user registration and login.
+- **Cloud Firestore** – Stores announcements, users, notification read status, and announcement history.
+- **Firebase Core** – Connects the iOS application to the Firebase project.
 
-**Tools:**
+### Tools
 
--   **Git / GitHub** – Version control.
--   **Vercel** – Deployment pipeline.
+- **Git / GitHub** – Version control and project repository management.
+- **Firebase Console** – Database, authentication, and backend management.
+- **iOS Simulator** – Used for testing the application.
 
 ---
 
 ## 📂 Project Structure
 
-This repository is a **monorepo** containing two distinct React applications:
+This repository contains the Swift/Xcode version of the Acadvisory Announcement App.
 
 ```text
-├── /client          # Public-facing application (React + Tailwind)
-│   ├── src/         # UI Components for public view
-│   └── package.json
+├── Acadvisory/
+│   ├── AcadvisoryApp.swift          # Main app entry point and Firebase initialization
+│   ├── ContentView.swift            # Login and sign-up screens
+│   ├── DashboardViews.swift         # Home dashboard and announcement list UI
+│   ├── CalendarViews.swift          # Calendar and announcement detail screens
+│   ├── NewAnnouncementView.swift    # Admin create/edit announcement screen
+│   ├── ProfileViews.swift           # User profile and admin history screen
+│   ├── SharedViews.swift            # Reusable UI components and bottom navigation
+│   ├── Services.swift               # Firebase authentication and Firestore logic
+│   ├── Models.swift                 # Data models for users, announcements, and history
+│   ├── AppTheme.swift               # App colors and theme styling
+│   ├── Assets.xcassets              # App images and assets
+│   └── GoogleService-Info.plist     # Firebase iOS configuration file
 │
-├── /admin           # Protected administrative panel (React + Tailwind)
-│   ├── src/         # Dashboard views & Supabase CRUD logic
-│   └── package.json
-│
-└── README.md        # Documentation
-```
+└── README.md                        # Project documentation
